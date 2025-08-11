@@ -14,8 +14,8 @@ if ($conn->connect_error) {
 }
 
 // Recibir datos del formulario
-$nombre = $_POST['nombre'];
-$apellido = $_POST['apellido'];
+$nombre = $_POST['nombres'];
+$apellido = $_POST['apellidos'];
 $matricula = $_POST['matricula'];
 $correo = $_POST['correo'];
 $grupo = $_POST['grupo'];

@@ -21,8 +21,8 @@ if ($result->num_rows > 0) {
     echo "<tr><th>Nombre</th><th>Apellido</th><th>Matrícula</th><th>Correo</th><th>Grupo</th></tr>";
     while ($row = $result->fetch_assoc()) {
         echo "<tr>";
-        echo "<td>" . htmlspecialchars($row['nombre']) . "</td>";
-        echo "<td>" . htmlspecialchars($row['apellido']) . "</td>";
+        echo "<td>" . htmlspecialchars($row['nombres']) . "</td>";
+        echo "<td>" . htmlspecialchars($row['apellidos']) . "</td>";
         echo "<td>" . htmlspecialchars($row['matricula']) . "</td>";
         echo "<td>" . htmlspecialchars($row['correo']) . "</td>";
         echo "<td>" . htmlspecialchars($row['grupo']) . "</td>";
