@@ -10,7 +10,7 @@ if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
-$sql = "SELECT nombre, apellido, matricula, correo, grupo FROM grupo";
+$sql = "SELECT nombres, apellidos, matricula, correo, grupo FROM grupo";
 $result = $conn->query($sql);
 
 echo "<h1>Alumnos registrados</h1>";

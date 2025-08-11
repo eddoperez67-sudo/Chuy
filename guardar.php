@@ -21,7 +21,7 @@ $correo = $_POST['correo'];
 $grupo = $_POST['grupo'];
 
 // Insertar en la tabla (asumo que la tabla se llama alumnos)
-$sql = "INSERT INTO grupo (nombre, apellido, matricula, correo, grupo) VALUES (?, ?, ?, ?, ?)";
+$sql = "INSERT INTO grupo (nombres, apellidos, matricula, correo, grupo) VALUES (?, ?, ?, ?, ?)";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("sssss", $nombre, $apellido, $matricula, $correo, $grupo);
 
