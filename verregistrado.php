@@ -14,7 +14,7 @@ $sql = "SELECT nombres, apellidos, matricula, correo, grupo FROM grupo";
 $result = $conn->query($sql);
 
 echo "<h1>Alumnos registrados</h1>";
-echo "<a href='index.htm'>Volver al formulario</a><br><br>";
+echo "<a href='index.php'>Volver al formulario</a><br><br>";
 
 if ($result->num_rows > 0) {
     echo "<table border='1' cellpadding='5' cellspacing='0'>";
