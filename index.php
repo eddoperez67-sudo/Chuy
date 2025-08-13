@@ -9,10 +9,10 @@
 
     <form action="guardar.php" method="post">
         <label>Nombres:</label><br />
-        <input type="text" name="nombre" maxlength="50" required /><br />
+        <input type="text" name="nombres" maxlength="50" required /><br />
 
         <label>Apellidos:</label><br />
-        <input type="text" name="apellido" maxlength="50" required /><br />
+        <input type="text" name="apellidos" maxlength="50" required /><br />
 
         <label>Matrícula:</label><br />
         <input type="text" name="matricula" maxlength="50" required /><br />
