@@ -18,7 +18,7 @@ echo "<a href='index.php'>Volver al formulario</a><br><br>";
 
 if ($result->num_rows > 0) {
     echo "<table border='1' cellpadding='5' cellspacing='0'>";
-    echo "<tr><th>Nombre</th><th>Apellido</th><th>Matrícula</th><th>Correo</th><th>Grupo</th></tr>";
+    echo "<tr><th>nombres</th><th>apellidos</th><th>matricula</th><th>Correo</th><th>grupo</th></tr>";
     while ($row = $result->fetch_assoc()) {
         echo "<tr>";
         echo "<td>" . htmlspecialchars($row['nombres']) . "</td>";

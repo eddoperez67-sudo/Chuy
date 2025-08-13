@@ -1,26 +1,29 @@
 <?php
 $servername = getenv('DB_HOST');
-$username = getenv('DB_USER');
-$password = getenv('DB_PASSWORD');
-$dbname = getenv('DB_DATABASE');
-$port = getenv('DB_PORT'); 
+$username   = getenv('DB_USER');
+$password   = getenv('DB_PASSWORD');
+$dbname     = getenv('DB_DATABASE');
+$port       = getenv('DB_PORT');
+
+// Verifica que las variables tienen valor
+if (!$servername || !$username || !$password || !$dbname || !$port) {
+    die("Error: Variables de entorno no definidas");
+}
 
 $conn = new mysqli($servername, $username, $password, $dbname, $port);
 
-// Crear conexión
-$conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
 // Recibir datos del formulario
-$nombre = $_POST['nombres'];
-$apellido = $_POST['apellidos'];
+$nombre    = $_POST['nombres'];
+$apellido  = $_POST['apellidos'];
 $matricula = $_POST['matricula'];
-$correo = $_POST['correo'];
-$grupo = $_POST['grupo'];
+$correo    = $_POST['correo'];
+$grupo     = $_POST['grupo'];
 
-// Insertar en la tabla (asumo que la tabla se llama alumnos)
+// Insertar en la tabla
 $sql = "INSERT INTO grupo (nombres, apellidos, matricula, correo, grupo) VALUES (?, ?, ?, ?, ?)";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("sssss", $nombre, $apellido, $matricula, $correo, $grupo);
